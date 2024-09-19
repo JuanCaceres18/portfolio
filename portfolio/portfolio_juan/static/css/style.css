@@ -28,7 +28,7 @@ nav{
     color: white;
     font-weight: 500;
     letter-spacing: 3px;
-    font-size: 30px;
+    font-size: 50px;
 }
 .h1-header{
     margin-left: 40px;
@@ -50,6 +50,7 @@ nav{
     text-decoration: none;
     padding: 30px;
     font-weight: 300;
+    font-size: 27px;
 }
 .text-header-left{
     display: flex;
@@ -69,13 +70,14 @@ select{
     color: white;
     outline: none;
     margin-right: 40px;
+    font-size: 25px;
 }
 .btn-contact{
     color: #F4CD6C;
     border-radius: 5px;
     background-color: #34353A;
     border: 3px solid #F4CD6C;
-    padding: 5px;
+    padding: 10px;
     width: 100px;
     cursor: pointer;
 }
@@ -86,22 +88,24 @@ select{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items:flex-start;
+    height: 100vh;
 }
 .text-home{
+    margin-top: 180px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 .text-home h2{
-    font-size: 46px;
+    font-size: 80px;
     color: white;
     font-weight: 300;
 }
 .text-home h3{
     color: white;
-    font-size: 30px;
+    font-size: 60px;
     font-weight: 300;
 }
 .hire-me-btn{
@@ -110,30 +114,130 @@ select{
     background-color: #34353A;
     border: 5px solid #F4CD6C;
     padding: 5px;
-    width: 180px;
-    height: 50px;
-    font-size: 22px;
+    width: 250px;
+    height: 60px;
+    font-size: 30px;
     cursor: pointer;
     margin-top: 10px;
 }
 
 .img-home{
-    width: 433px;
-    height: 577px;
-    background-image: url('portfolio/static/img/Circle_diseño.png');
+    width: 500px;
+    height: 700px;
+    position: relative;
 }
-.img-home img{
+.img-home .juan_blwh{
     width: 100%;
     height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+.diseño-circulos{
+    width: 500px;
+    height: 430px;
+    position: absolute;
+    top: 270px;
+    z-index: -1;
 }
 .name-home{
     color: #F4CD6C;
     font-weight: bold;
-    font-size: 70px;
+    font-size: 100px;
 }
 .icons{
     color: white;
     font-size: 30px;
     align-self: flex-end;
     padding-left: 30px;
+}
+
+/* Styles About Me */
+.about-me{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-image: url('portfolio/portfolio_juan/static/img/img-Juan.png'); */
+}
+.title-about{
+    display: flex;
+}
+.title-about h2{
+    font-size: 100px;
+    letter-spacing: 20px;
+    color: white;
+    margin-top: 25px;
+}
+
+.container-text-img{
+    display: flex;
+    justify-content: center;
+}
+.img-about{
+    margin-top:50px;
+    width: 500px;
+    height: 600px;
+    border-radius: 80%;
+    box-shadow: 10px 10px 50px black;
+
+}
+.polygon-about{
+    font-size: 20px;
+}
+.img-about img{
+    width: 100%;
+    height: 100%;
+    border-radius: 80%;
+    text-align: justify;
+}
+.text-about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.text-about h3{
+    color: white;
+    font-weight: 500;
+}
+.btn-resume{
+    background: linear-gradient(#F2994A,#F2C94C);
+    padding: 25px;
+    width: 300px;
+    color: white;
+    font-size: 25px;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+
+/* Skills Style */
+.skills{
+    display: flex;
+    width: 100%;
+    height: 150vh;
+    flex-direction: column;
+    align-items: center;
+}
+.skills h2{
+    text-align: center;
+    font-size: 100px;
+    color: white;
+    margin-top: 30px;
+}
+.container-cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.card{
+    width: 100px;
+    height: 100px;
+    background-color: #3D3E42;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
