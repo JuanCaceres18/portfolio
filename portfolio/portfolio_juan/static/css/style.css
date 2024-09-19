@@ -149,6 +149,7 @@ select{
     font-size: 30px;
     align-self: flex-end;
     padding-left: 30px;
+    padding: 10px;
 }
 
 /* Styles About Me */
