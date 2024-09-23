@@ -156,7 +156,7 @@ select{
 .about-me{
     margin-top: 120px;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     /* background-image: url('./portfolio_juan/static/img/img-Juan.png'); */
@@ -164,6 +164,8 @@ select{
 .title-about{
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 .title-about h2{
     font-size: 100px;
@@ -185,8 +187,8 @@ select{
     margin-left: 90px;
 }
 .polygon-about{
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
 }
 .img-about img{
     width: 100%;
@@ -223,30 +225,85 @@ select{
 .skills{
     display: flex;
     width: 100%;
-    height: 150vh;
+    height: 100vh;
     flex-direction: column;
     align-items: center;
+    gap: 30px;
 }
 .skills h2{
     text-align: center;
     font-size: 100px;
     color: white;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 .container-cards{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    gap: 30px;
 }
 .card{
-    width: 100px;
-    height: 100px;
+    width: 180px;
+    height: 180px;
     background-color: #3D3E42;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border-radius: 15px;
+}
+.card h4{
+    color: white;
+}
+
+.icon-card{
+    width:60px;
+    height: 60px;
+}
+
+/* Work Styles */
+.work{
+    width: 100%;
+    height: 120vh;
+}
+.title-work{
+    text-align: center;
+    color: white;
+    font-size: 100px;
+}
+.title-design-work{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.icon-card{
-    width:80px;
-    height: 80px;
+.projects{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.project{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+.text-container-project{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.title-project{
+    color: #F4CD6C;
+    font-size: 60px;
+    text-transform: uppercase;
+}
+.text-project{
+    width: 50%;
+}
+.text-project h3, p{
+    color: white;
 }
