@@ -15,7 +15,7 @@ body{
 /* Header styles */
 header{
     width: 100%;
-    height: 50%;
+    height: 40%;
     padding: 25px 10px 0px 10px;
     background-size: cover;
 }
@@ -28,7 +28,7 @@ nav{
     color: white;
     font-weight: 500;
     letter-spacing: 3px;
-    font-size: 50px;
+    font-size: 30px;
 }
 .h1-header{
     margin-left: 40px;
@@ -50,7 +50,7 @@ nav{
     text-decoration: none;
     padding: 30px;
     font-weight: 300;
-    font-size: 27px;
+    font-size: 20px;
 }
 .text-header-left{
     display: flex;
@@ -70,7 +70,7 @@ select{
     color: white;
     outline: none;
     margin-right: 40px;
-    font-size: 25px;
+    font-size: 20px;
 }
 .btn-contact{
     color: #F4CD6C;
@@ -92,20 +92,20 @@ select{
     height: 88vh;
 }
 .text-home{
-    margin-top: 180px;
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 .text-home h2{
-    font-size: 80px;
+    font-size: 40px;
     color: white;
     font-weight: 300;
 }
 .text-home h3{
     color: white;
-    font-size: 75px;
+    font-size: 45px;
     font-weight: 200;
 }
 .hire-me-btn{
@@ -114,16 +114,16 @@ select{
     background-color: #34353A;
     border: 5px solid #F4CD6C;
     padding: 5px;
-    width: 250px;
+    width: 200px;
     height: 60px;
-    font-size: 30px;
+    font-size: 23px;
     cursor: pointer;
     margin-top: 10px;
 }
 
 .img-home{
-    width: 550px;
-    height: 825px;
+    width: 410px;
+    height: 550px;
     position: relative;
 }
 .img-home .juan_blwh{
@@ -133,20 +133,20 @@ select{
     z-index: 1;
 }
 .diseño-circulos{
-    width: 550px;
-    height: 555px;
+    width: 450px;
+    height: 390px;
     position: absolute;
-    top: 270px;
+    top: 160px;
     z-index: -1;
 }
 .name-home{
     color: #F4CD6C;
     font-weight: bold;
-    font-size: 120px;
+    font-size: 70px;
 }
 .icons{
     color: white;
-    font-size: 50px;
+    font-size: 30px;
     align-self: flex-end;
     padding-left: 40px;
     cursor: pointer;
@@ -168,7 +168,7 @@ select{
     gap: 20px;
 }
 .title-about h2{
-    font-size: 100px;
+    font-size: 60px;
     letter-spacing: 20px;
     color: white;
     margin-top: 25px;
@@ -180,15 +180,15 @@ select{
 }
 .img-about{
     margin-top:50px;
-    width: 600px;
-    height: 600px;
+    width: 450px;
+    height: 450px;
     border-radius: 80%;
     box-shadow: 10px 10px 50px black;
     margin-left: 90px;
 }
 .polygon-about{
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
 }
 .img-about img{
     width: 100%;
@@ -205,16 +205,16 @@ select{
 }
 .text-about p{
     color: white;
-    font-weight: 500;
-    font-size: 30px;
+    font-weight: 400;
+    font-size: 23px;
     padding-bottom: 30px;
 }
 .btn-resume{
     background: linear-gradient(#F2994A,#F2C94C);
-    padding: 25px;
+    padding: 23px;
     width: 300px;
     color: white;
-    font-size: 25px;
+    font-size: 23px;
     border-radius: 10px;
     outline: none;
     cursor: pointer;
@@ -225,14 +225,14 @@ select{
 .skills{
     display: flex;
     width: 100%;
-    height: 100vh;
+    height: 130vh;
     flex-direction: column;
     align-items: center;
     gap: 30px;
 }
 .skills h2{
     text-align: center;
-    font-size: 100px;
+    font-size: 60px;
     color: white;
     margin-top: 20px;
 }
@@ -243,8 +243,8 @@ select{
     gap: 30px;
 }
 .card{
-    width: 180px;
-    height: 180px;
+    width: 130px;
+    height: 130px;
     background-color: #3D3E42;
     display: flex;
     flex-direction: column;
@@ -258,8 +258,8 @@ select{
 }
 
 .icon-card{
-    width:60px;
-    height: 60px;
+    width:45px;
+    height: 45px;
 }
 
 /* Work Styles */
@@ -275,7 +275,7 @@ select{
 .title-work{
     text-align: center;
     color: white;
-    font-size: 100px;
+    font-size: 60px;
 }
 .title-design-work{
     display: flex;
@@ -295,7 +295,7 @@ select{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 85%;
 }
 .text-container-project{
     display: flex;
@@ -306,7 +306,7 @@ select{
 }
 .title-project{
     color: #F4CD6C;
-    font-size: 60px;
+    font-size: 50px;
     text-transform: uppercase;
     letter-spacing: 10px;
 }
@@ -317,11 +317,11 @@ select{
     color: white;
 }
 .text-project h3{
-    font-size: 35px;
+    font-size: 30px;
     letter-spacing: 10px;
 }
 .text-project p{
-    font-size: 21px;
+    font-size: 20px;
     padding-bottom: 20px;
 }
 .labels-project{
@@ -331,7 +331,7 @@ select{
 .label{
     background-color: #3D3E42;
     font-size: 20px;
-    width: 150px;
+    width: 130px;
     text-align: center;
     border-radius: 20px;
     padding: 5px;
@@ -348,16 +348,16 @@ select{
 }
 .option-live, .option-github{
     color: white;
-    font-size: 25px;
+    font-size: 23px;
 }
 .option-live p, .option-github p{
     text-decoration: underline;
-    font-size: 25px;
+    font-size: 23px;
     cursor: pointer;
 }
 .img-container{
-    width: 1000px;
-    height: 500px;
+    width: 900px;
+    height: 400px;
     border-radius: 40px;
     box-shadow: -10px 21px 20px #00000056;
 }
@@ -382,7 +382,7 @@ select{
 /* Contact Styles */
 .contact{
     display: flex;
-    height: 70vh;
+    height: 55vh;
     flex-direction: column;
     align-items: center;
 }
@@ -463,4 +463,18 @@ select{
     letter-spacing: 10px;
     border-radius: 10px;
     width: 70%;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 200px 0px 200px;
+}
+footer h1{
+    color: white;
+    font-size: 40px;
+    font-weight: 300;
+}
+footer p{
+    font-size: 30px;
 }
