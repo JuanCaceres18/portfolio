@@ -372,10 +372,13 @@ select{
     color: white;
     font-size: 23px;
 }
-.option-live p, .option-github p{
+.option-live p, .option-github a{
     text-decoration: underline;
     font-size: 23px;
     cursor: pointer;
+}
+.option-github a{
+    color: white;
 }
 .img-container{
     width: 700px;
