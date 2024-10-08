@@ -37,15 +37,15 @@
     <!-- Home -->
     <section class="home" id="home">
         <div class="icons animated fadeInUp">
-            <i class="fa-brands fa-linkedin "></i>
-            <i class="fa-brands fa-github"></i>
-            <i class="fa-brands fa-discord"></i>
+            <a href="https://www.linkedin.com/in/juanpablocaceres18/" target="_blank"><i class="fa-brands fa-linkedin "></i></a>
+            <a href="https://github.com/JuanCaceres18" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-discord"></i></a>
         </div>
         <div class="text-home animated fadeInUp">
             <h2>I'M <span class="name-home">Juan Pablo</span></h2>
             <h3>Full-Stack Developer</h3>
             <h3>Web Designer</h3>
-            <button class="hire-me-btn hvr-ripple-out">Hire me</button>
+            <a class="hire-me-btn" href="#contact">Hire me</a>
         </div>
         <div class="img-home animated fadeInUp">
             <img class="diseño-circulos" src="{% static 'img/Circle_diseño.png' %}" alt="Diseño de círculos">
@@ -64,8 +64,8 @@
                 <img src="{% static 'img/coding.jpg' %}" alt="Imagen de persona programando">
             </div>
             <div class="text-about">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis, soluta suscipit beatae cumque iste quidem, assumenda inventore et hic, corporis mollitia fugit praesentium quis natus sunt consequatur rem necessitatibus eaque.</p>
-                <button class="btn-resume">My resume</button>
+                <p>I'm 19 years old and I'm studying a career as a Systems Analyst. I'm passionate about full-stack development and web design. I mainly dedicate myself to making landing pages for companies or ventures.  </p>
+                <a class="btn-resume" href="{% static 'pdfs/CV_1.pdf' %}" download="mi_cv.pdf">My resume</a>
             </div>
         </div>
     </section>
@@ -274,7 +274,7 @@
     </section>
 
     <!-- Contact me -->
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="main-text-contact">
             <img class="arrow-contact"  src="{% static 'img/arrow-right.png' %}" alt="Flecha derecha diseño de la sección de contacto">
             <h2>Contact Me</h2>
@@ -312,6 +312,6 @@
         <p>2024 -Juan Pablo Caceres, all rights reserverd </p>
     </footer>
 
-    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/main.js' %}" defer></script>
 </body>
 </html>
