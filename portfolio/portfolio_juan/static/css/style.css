@@ -155,6 +155,7 @@ select{
 .icons{
     font-size: 30px;
     align-self: flex-end;
+    margin-bottom: 30px;
     padding-left: 40px;
     cursor: pointer;
 }
