@@ -639,3 +639,14 @@ footer p{
     right: 0;
 }
 
+/* Fade-In About-Me */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px); /* Mueve ligeramente el contenido hacia abajo */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Duración del efecto */
+}
+  
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0); /* Devuelve a la posición original */
+}
