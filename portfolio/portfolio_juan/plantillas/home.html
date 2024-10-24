@@ -4,13 +4,13 @@
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>👨‍💻Portfolio Juan_dev👨‍💻</title>
+    <title>{% block title %}👨‍💻Portfolio Juan_dev👨‍💻{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     
 </head>
 <body>
-    <!-- Menú del sitio -->
+    <!-- Menú del sitio -->   
     <header>
         <nav>
             <ul class="left">
@@ -33,7 +33,6 @@
             </ul>
         </nav>
     </header>
-
     <!-- Home -->
     <section class="home" id="home">
         <div class="icons animated fadeInUp">
@@ -165,7 +164,7 @@
 
     <!-- Work - Projects -->
     <section class="work" id="work">
-        <div class="title-design-work fade-in">
+        <div class="title-design-work">
             <h2 class="title-work">Work</h2>
             <img src="{% static 'img/design-work.png' %}" alt="Diseño svg para sección de proyectos">
         </div>
