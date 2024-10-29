@@ -5,4 +5,4 @@ def home(request):
     return render(request, 'home.html')
 
 def view_projects(request):
-    return render(request, 'menú.html')
+    return render(request, 'projects_all.html')
