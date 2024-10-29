@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% block content %}
     <!-- Home -->
     <section class="home" id="home">
         <div class="icons animated fadeInUp">
@@ -271,12 +272,4 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <h1><span class="arrow-h1">&lt;</span>Juan<span class="arrow-h1">/&gt;</span></h1>
-        <p>2024 -Juan Pablo Caceres, all rights reserverd </p>
-    </footer>
-
-    <script src="{% static 'js/main.js' %}"></script>
-</body>
-</html>
+{% endblock %}
