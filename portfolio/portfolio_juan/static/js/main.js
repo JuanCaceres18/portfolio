@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     }, {
-      threshold: 0.5 // Dispara el evento cuando el 10% de la sección es visible
+      threshold: 0.3 // Dispara el evento cuando el 30% de la sección es visible
     });
   
     sections.forEach(section => {
