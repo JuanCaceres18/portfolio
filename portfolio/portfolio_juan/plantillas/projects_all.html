@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 <section class="all_projects">
@@ -8,10 +9,12 @@
     </div>
     <div class="cards-projects">
         <div class="card-project">
-            <img src="#" alt="#">
+            <div class="container-img-project">
+                <img src="{% static 'img/portfolio_home.png' %}" alt="Imagen del Home del portfolio">
+            </div>
             <div class="card-details">
                 <h3>Portfolio</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt alias, corporis eius iste iusto mollitia debitis eligendi earum id illo deserunt numquam exercitationem dolor, aspernatur delectus perspiciatis impedit rem quibusdam.</p>
+                <p class="msg-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt alias, corporis eius iste iusto mollitia debitis eligendi earum id illo deserunt numquam exercitationem dolor, aspernatur delectus perspiciatis impedit rem quibusdam.</p>
                 <div class="options-card">
                     <div class="card-live">
                         <i class="fa-solid fa-link"></i>

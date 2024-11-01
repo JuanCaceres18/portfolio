@@ -657,7 +657,8 @@ footer p{
 /* ---- PÁGINA PROJECTS.HTML ---- */
 .all_projects{
     width: 100%;
-    height: 80vh;
+    height: 70vh;
+    gap: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -685,7 +686,51 @@ footer p{
     grid-template-rows: 1fr 1fr 1fr;
 }
 .card-project{
-    width: 20%;
-    height: 50%;
-    background-color: #3D3E42;
+    width: 30%;
+    height: 100%;
+    background: #5B5B5B;
+}
+.container-img-project{
+    width: 270px;
+    height: 150px;
+}
+.container-img-project img{
+    width: 100%;
+    height: 100%;
+}
+.card-details{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.card-details h3{
+    color: white;
+    text-align: center;
+}
+.msg-desc{
+    color: #C1C1C1;
+}
+.options-card{
+    display: flex;
+    justify-content: space-between;
+}
+.card-live{
+    display: flex;
+    gap: 5px;
+}
+.card-live i{
+    color: white;
+}
+.card-live p{
+    text-decoration: underline;
+}
+.card-github{
+    display: flex;
+    gap: 5px;
+}
+.card-github i{
+    color: white;
+}
+.card-github p{
+    text-decoration: underline;
 }
