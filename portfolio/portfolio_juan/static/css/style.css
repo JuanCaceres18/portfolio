@@ -688,7 +688,10 @@ footer p{
 .card-project{
     width: 30%;
     height: 100%;
-    background: #5B5B5B;
+    background: #3D3E42;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 .container-img-project{
     width: 270px;
@@ -701,7 +704,9 @@ footer p{
 .card-details{
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
 }
 .card-details h3{
     color: white;
