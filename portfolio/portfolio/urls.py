@@ -20,6 +20,6 @@ from portfolio_juan.views import home, view_projects
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home),
+    path('', home, name='home'),
     path('projects/', view_projects, name='view_projects')
 ]
