@@ -21,18 +21,25 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Validación de datos en contact
-const formContact = document.querySelector(".form-container");
+const sectionContact = document.getElementById("contact");
+const containerContact = sectionContact.querySelector(".global-container-contact");
+const formContact = containerContact.querySelector(".form-container");
 const name = formContact.querySelector("#name");
-const email = document.querySelector("#email");
-const number = document.querySelector("#number");
+const email = formContact.querySelector("#email");
+const number = formContact.querySelector("#number");
 const botonSubmit = formContact.querySelector(".btn-submit-contact");
 
 console.log(name);
 
 formContact.addEventListener("submit", (e) =>{
   e.preventDefault();
-  if (!name){
-    alert("Ingresa el nombre");
-  
+  if (!name.value){
+    name.style.borderBottom = "5px solid red";
+  }
+  if (!email.value){
+    email.style.borderBottom = "5px solid red";
+  }
+  if (!number.value){
+    number.style.borderBottom = "5px solid red";
   }
 })
