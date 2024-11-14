@@ -59,7 +59,19 @@ formContact.addEventListener("submit", (e) =>{
     e.preventDefault();
   }
   else{
-    
+    mostrarMensaje();
+    limpiarFormulario();
   }
 
+  function mostrarMensaje(){
+    const mensajeExito = document.getElementById("mensajeExito");
+    mensajeExito.style.display = "block";
+  }
+
+  function limpiarFormulario(){
+    name.value = "";
+    email.value = "";
+    number.value = "";
+
+  }
 })

@@ -536,6 +536,15 @@ footer p{
     font-size: 27px;
 }
 
+/* Mensaje que aparece al validar el formulario correctamente */
+#mensajeExito{
+    display: none;
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    color: black;
+}
+
 /* Animations */
 @-webkit-keyframes fadeInDown {
     from {
@@ -761,9 +770,4 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 .card-github p{
     text-decoration: underline;
-}
-
-/* Clase de validación de datos */
-.wrong{
-    border-bottom: 5px solid #ff0000; 
 }
