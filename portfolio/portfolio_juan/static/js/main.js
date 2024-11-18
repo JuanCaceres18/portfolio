@@ -32,30 +32,26 @@ const botonSubmit = formContact.querySelector(".btn-submit-contact");
 console.log(name);
 
 formContact.addEventListener("submit", (e) =>{
-  let formValido = true;
   if (!name.value){
     name.style.borderBottom = "5px solid red";
-    formValido = false;
   }
   else{
     name.style.borderBottom = "5px solid #F2C94C";
   }
   if (!email.value || !email.includes("@")){
     email.style.borderBottom = "5px solid red";
-    formValido = false;
   }
   else{
     email.style.borderBottom = "5px solid #F2C94C";
   }
   if (!number.value){
     number.style.borderBottom = "5px solid red";
-    formValido = false;
   }
   else{
     number.style.borderBottom = "5px solid #F2C94C";
   }
 
-  if(!formValido){
+  if(!name.value || !number.value || !email.value){
     e.preventDefault();
   }
   else{

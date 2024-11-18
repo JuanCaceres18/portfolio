@@ -12,3 +12,5 @@ function CardSkills(){
 </svg>
 <h4>Python</h4>
 </div>
+
+export default CardSkills;
