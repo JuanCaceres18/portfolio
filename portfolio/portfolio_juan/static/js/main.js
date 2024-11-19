@@ -32,32 +32,36 @@ const botonSubmit = formContact.querySelector(".btn-submit-contact");
 console.log(name);
 
 formContact.addEventListener("submit", (e) =>{
-  if (!name.value){
+  let isValid = true;
+  if (!name.value.trim()){
     name.style.borderBottom = "5px solid red";
+    isValid = false;
   }
   else{
     name.style.borderBottom = "5px solid #F2C94C";
   }
-  if (!email.value || !email.includes("@")){
+  if (!email.value.trim() || !email.value.includes("@")){
     email.style.borderBottom = "5px solid red";
+    isValid = false;
   }
   else{
     email.style.borderBottom = "5px solid #F2C94C";
   }
-  if (!number.value){
+  if (!number.value.trim()){
     number.style.borderBottom = "5px solid red";
+    isValid = false;
   }
   else{
     number.style.borderBottom = "5px solid #F2C94C";
   }
 
-  if(!name.value || !number.value || !email.value){
+  if (!isValid){
     e.preventDefault();
+    return;
   }
-  else{
-    mostrarMensaje();
-    limpiarFormulario();
-  }
+
+  mostrarMensaje();
+  limpiarFormulario();
 
   function mostrarMensaje(){
     const mensajeExito = document.getElementById("mensajeExito");
