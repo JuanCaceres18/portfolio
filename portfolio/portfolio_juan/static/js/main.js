@@ -65,7 +65,7 @@ formContact.addEventListener("submit", (e) =>{
 
   function mostrarMensaje(){
     const mensajeExito = document.getElementById("mensajeExito");
-    mensajeExito.innerHTML = "<p>Mensaje enviado correctamente!</p>";
+    mensajeExito.style.display = "block";
   }
 
   function limpiarFormulario(){
