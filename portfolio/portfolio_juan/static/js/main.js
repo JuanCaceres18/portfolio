@@ -33,6 +33,7 @@ console.log(name);
 
 formContact.addEventListener("submit", (e) =>{
   let isValid = true;
+  e.preventDefault();
   if (!name.value.trim()){
     name.style.borderBottom = "5px solid red";
     isValid = false;
@@ -59,8 +60,14 @@ formContact.addEventListener("submit", (e) =>{
     e.preventDefault();
     return;
   }
+    setTimeout(() => {
+    message.style.display = "none";
+  }, 2000);
 
   mostrarMensaje();
+  setTimeout(() => {
+    message.style.display = "none";
+  }, 10000);
   limpiarFormulario();
 
   function mostrarMensaje(){
