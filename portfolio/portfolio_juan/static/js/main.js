@@ -60,18 +60,18 @@ formContact.addEventListener("submit", (e) =>{
     e.preventDefault();
     return;
   }
-    setTimeout(() => {
-    message.style.display = "none";
-  }, 2000);
-
+  
   mostrarMensaje();
   setTimeout(() => {
-    message.style.display = "none";
-  }, 10000);
+    mensajeExito.style.display = "block";
+  }, 2000);
   limpiarFormulario();
+
+  
 
   function mostrarMensaje(){
     const mensajeExito = document.getElementById("mensajeExito");
+    document.body.style.overflow = "hidden";
     mensajeExito.style.display = "block";
   }
 
