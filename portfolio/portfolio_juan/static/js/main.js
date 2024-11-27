@@ -62,17 +62,17 @@ formContact.addEventListener("submit", (e) =>{
   }
   
   mostrarMensaje();
-  setTimeout(() => {
-    mensajeExito.style.display = "block";
-  }, 2000);
   limpiarFormulario();
 
   
 
   function mostrarMensaje(){
     const mensajeExito = document.getElementById("mensajeExito");
-    document.body.style.overflow = "hidden";
+    // document.body.style.overflow = "hidden";
     mensajeExito.style.display = "block";
+    setTimeout(() => {
+      mensajeExito.style.display = "none";
+    }, 2000);
   }
 
   function limpiarFormulario(){
