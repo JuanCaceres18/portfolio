@@ -68,10 +68,15 @@ formContact.addEventListener("submit", (e) =>{
 
   function mostrarMensaje(){
     const mensajeExito = document.getElementById("mensajeExito");
+    const fondoNegro = document.getElementById("fondoNegro");
     // document.body.style.overflow = "hidden";
+    fondoNegro.style.display = "flex";
     mensajeExito.style.display = "block";
+    document.body.classList.add = "no-scroll";
     setTimeout(() => {
       mensajeExito.style.display = "none";
+      fondoNegro.style.display = "none";
+      document.body.classList.remove = "no-scroll";
     }, 2000);
   }
 

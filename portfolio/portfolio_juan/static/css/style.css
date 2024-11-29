@@ -536,6 +536,16 @@ footer p{
     font-size: 27px;
 }
 
+/* Estilos necesarios para controlar el no-scroll y el fondo negro al enviar el form */
+body.no-scroll{
+    overflow: hidden;
+}
+#fondoNegro{
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    display: none;   
+}
 /* Mensaje que aparece al validar el formulario correctamente */
 #mensajeExito{
     position: fixed;
@@ -717,6 +727,7 @@ input[type="search"]::-webkit-search-cancel-button {
     -webkit-appearance: none;
     appearance: none;
 }
+
 .cards-projects{
     margin-top: 10px;
     width: 80%;
