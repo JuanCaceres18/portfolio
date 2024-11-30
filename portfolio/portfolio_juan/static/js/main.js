@@ -72,11 +72,11 @@ formContact.addEventListener("submit", (e) =>{
     // document.body.style.overflow = "hidden";
     fondoNegro.style.display = "flex";
     mensajeExito.style.display = "block";
-    document.body.classList.add = "no-scroll";
+    document.body.classList.add("no-scroll");
     setTimeout(() => {
       mensajeExito.style.display = "none";
       fondoNegro.style.display = "none";
-      document.body.classList.remove = "no-scroll";
+      document.body.classList.remove("no-scroll");
     }, 2000);
   }
 

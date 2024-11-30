@@ -537,7 +537,7 @@ footer p{
 }
 
 /* Estilos necesarios para controlar el no-scroll y el fondo negro al enviar el form */
-body.no-scroll{
+.no-scroll{
     overflow: hidden;
 }
 #fondoNegro{
