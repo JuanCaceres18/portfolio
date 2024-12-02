@@ -62,7 +62,7 @@ formContact.addEventListener("submit", (e) =>{
   }
   
   mostrarMensaje();
-  limpiarFormulario();
+
 
   
 
@@ -70,7 +70,7 @@ formContact.addEventListener("submit", (e) =>{
     const mensajeExito = document.getElementById("mensajeExito");
     const fondoNegro = document.getElementById("fondoNegro");
     // document.body.style.overflow = "hidden";
-    fondoNegro.style.display = "flex";
+    fondoNegro.style.display = "block";
     mensajeExito.style.display = "block";
     document.body.classList.add("no-scroll");
     setTimeout(() => {
@@ -78,12 +78,12 @@ formContact.addEventListener("submit", (e) =>{
       fondoNegro.style.display = "none";
       document.body.classList.remove("no-scroll");
     }, 2000);
+    limpiarFormulario();
   }
 
   function limpiarFormulario(){
     name.value = "";
     email.value = "";
     number.value = "";
-
   }
 })

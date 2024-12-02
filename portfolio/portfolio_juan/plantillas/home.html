@@ -1,8 +1,14 @@
 {% extends 'base.html' %}
 
-{% block title %} 🔨 Projects 🔨{% endblock %}
+{% block title %} 👨‍💻Portfolio Juan_dev👨‍💻{% endblock %}
 {% block content %}
 {% load static %}
+    <div id="fondoNegro">
+        <div id="mensajeExito" class="fade-in">
+            <p class="msgForm fade-in">¡Formulario enviado correctamente!</p>
+            <i class="fa-solid fa-thumbs-up icon-form fade-in"></i>
+        </div>
+    </div>
     <!-- Home -->
     <section class="home" id="home">
         <div class="icons animated fadeInUp">
@@ -242,7 +248,6 @@
         <a href="{% url 'view_projects' %}" class="btn-view-all">View All</a>
     </section>
 
-    <div id="fondoNegro"></div>
     <!-- Contact me -->
     <section class="contact fade-in" id="contact">
         <div class="main-text-contact">
@@ -273,10 +278,6 @@
                 <input type="number" id="phone" placeholder="Enter your phone">
                 <button class="btn-submit-contact">Submit</button>
             </form>
-            <div id="mensajeExito" class="fade-in">
-                <p class="msgForm fade-in">¡Formulario enviado correctamente!</p>
-                <i class="fa-solid fa-thumbs-up icon-form fade-in"></i>
-            </div>
         </div>
     </section>
 
