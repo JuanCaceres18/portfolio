@@ -70,12 +70,10 @@ formContact.addEventListener("submit", (e) =>{
     const mensajeExito = document.getElementById("mensajeExito");
     const fondoNegro = document.getElementById("fondoNegro");
     // document.body.style.overflow = "hidden";
-    fondoNegro.style.display = "block";
     mensajeExito.style.display = "block";
     document.body.classList.add("no-scroll");
     setTimeout(() => {
       mensajeExito.style.display = "none";
-      fondoNegro.style.display = "none";
       document.body.classList.remove("no-scroll");
     }, 2000);
     limpiarFormulario();
