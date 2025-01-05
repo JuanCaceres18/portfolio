@@ -55,7 +55,7 @@ ROOT_URLCONF = 'portfolio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:/Users/User/OneDrive/Escritorio/Portfolio-design/portfolio/portfolio_juan/plantillas'],
+        'DIRS': ['C:/Users/Usuario/Desktop/Portfolio/portfolio/portfolio/portfolio_juan/plantillas'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
