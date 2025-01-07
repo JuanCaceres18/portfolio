@@ -63,12 +63,10 @@ formContact.addEventListener("submit", (e) =>{
   
   mostrarMensaje();
 
-
-  
-
   function mostrarMensaje(){
     const mensajeExito = document.getElementById("mensajeExito");
     const fondoNegro = document.getElementById("fondoNegro");
+    sectionContact.scrollIntoView({ behavior: "smooth" });
     // document.body.style.overflow = "hidden";
     fondoNegro.style.display = "flex";
     mensajeExito.style.display = "block";
@@ -87,3 +85,33 @@ formContact.addEventListener("submit", (e) =>{
     number.value = "";
   }
 })
+
+
+// Cambiar idioma de la página
+const translations = {
+  en: {
+    m_home: "Home",
+    m_about: "About me",
+    m_skills: "Skills",
+    m_work: "Work",
+    m_contact: "Contact",
+    h_name_1: "I'M",
+    h_name_2: "Juan Pablo",
+    h_job: "Full-Stack Developer",
+    h_job_2: "Web Designer",
+    h_contact: "Hire me",
+    t_about: "About me",
+    p_about: "I'm 19 years old and I'm studying a career as a Systems Analyst. I'm passionate about full-stack development and web design. I mainly dedicate myself to making landing pages for companies or ventures.",
+    btn_about: "My resume",
+    t_skills: "My skills",
+    t_work: "Work",
+    t_project_1: "Project 1",
+    
+
+
+
+
+
+
+  }
+}

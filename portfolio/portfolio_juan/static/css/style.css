@@ -78,11 +78,20 @@ select{
     border-radius: 5px;
     background-color: #34353A;
     border: 3px solid #F4CD6C;
-    padding: 10px;
+    text-align: center;
+    line-height: 2rem;
+    text-decoration: none;
     width: 100px;
+    height: 40px;
     cursor: pointer;
+    transition: 1s ease;
 }
-
+.btn-contact:hover{
+    background-color: #F4CD6C;
+    color: white;
+    font-weight: bold;
+    transform: scale(1.1);
+}
 
 /* Home Styles */
 .home{
@@ -545,7 +554,7 @@ footer p{
 #fondoNegro{
     position: absolute;
     background: rgba(0, 0, 0, 0.7);
-    top: -25%;
+    top: -22%;
     left: 0;
     width: 100vw;
     height: 100vh; 
