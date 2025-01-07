@@ -96,22 +96,55 @@ const translations = {
     m_work: "Work",
     m_contact: "Contact",
     h_name_1: "I'M",
-    h_name_2: "Juan Pablo",
     h_job: "Full-Stack Developer",
     h_job_2: "Web Designer",
     h_contact: "Hire me",
-    t_about: "About me",
     p_about: "I'm 19 years old and I'm studying a career as a Systems Analyst. I'm passionate about full-stack development and web design. I mainly dedicate myself to making landing pages for companies or ventures.",
     btn_about: "My resume",
     t_skills: "My skills",
     t_work: "Work",
-    t_project_1: "Project 1",
-    
-
-
-
-
-
-
+    project_1: "Project 1",
+    d_project_1: "Personal portfolio in which I show my projects and the technologies I use. Additionally, the viewer can download my CV and contact me through a form.",
+    option_1: "Live preview",
+    option_2: "View code",
+    project_2: "Project 2",
+    d_project_2: "This was a project I did for the Front-End part of the Codo a Codo course called 'Full-Stack Python'. Basically, this is a clone of the Netflix page GUI including a registration form that has data validation",
+    project_3: "Project 3",
+    d_project_3: "This is a simple page that honors the renowned band Pescado Rabioso. On that page I experimented a lot with the DOM in JavaScript.",
+    btn_view_all: "View All",
+    t_form: "Drop a message",
+    d_form: "If you're interested in working with me or have any questions, feel free to fill out the form or reach out to me through any of the methods below. We can work together!",
+    btn_submit: "Submit",
+    msg_form: "Form submitted successfully",
+    t_projects: "All of my projects"
+  },
+  es : {
+    m_home: "Inicio",
+    m_about: "Sobre mí",
+    m_skills: "Habilidades",
+    m_work: "Proyectos",
+    m_contact: "Contacto",
+    h_name_1: "SOY",
+    h_ocupacion: "Desarrollador Full-Stack",
+    h_ocupacion_2: "Diseñador Web",
+    h_contacto: "Contáctame",
+    p_about: "Tengo 19 años y estoy estudiando la carrera de Analista de Sistemas. Me apasiona el Desarrollo Full-Stack y el Diseño Web. Me dedico principalmente a realizar landing pages para empresas o emprendimientos.",
+    btn_cv: "Mi CV",
+    t_habs: "Habilidades",
+    t_trabajo: "Mis proyectos",
+    proyecto_1: "Proyecto 1",
+    d_project_1: "Portafolio personal en el que muestro mis proyectos y las tecnologías que uso. Además, el espectador puede descargar mi CV y ​​contactarme a través de un formulario.",
+    opcion_1: "Ver página",
+    opcion_2: "Ver código",
+    proyecto_2: "Proyecto 2",
+    d_proyecto_2: "Este fue un proyecto que hice para la parte Front-End del curso Codo a Codo llamado 'Full-Stack Python'. Básicamente, este es un clon de la GUI de la página de Netflix que incluye un formulario de registro que tiene validación de datos.",
+    proyecto_3: "Proyecto 3",
+    d_proyecto_3: "Esta es una página sencilla que rinde homenaje a la reconocida banda Pescado Rabioso. En esa página experimenté mucho con el DOM en JavaScript.",
+    btn_ver_todo: "Ver todos",
+    t_formulario: "Deja un mensaje",
+    d_formulario: "Si está interesado en trabajar conmigo o tiene alguna pregunta, no dude en completar el formulario o comunicarse conmigo a través de cualquiera de los métodos siguientes. ¡Podemos trabajar juntos!",
+    btn_enviar: "Enviar",
+    msg_formulario: "Formulario enviado correctamente",
+    t_proyectos: "Todos mis proyectos"
   }
 }
