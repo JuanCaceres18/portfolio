@@ -88,8 +88,9 @@ formContact.addEventListener("submit", (e) =>{
 
 
 // Cambiar idioma de la página
+// Guardar traducciones según el idioma
 const translations = {
-  en: {
+  EN: {
     m_home: "Home",
     m_about: "About me",
     m_skills: "Skills",
@@ -116,35 +117,82 @@ const translations = {
     d_form: "If you're interested in working with me or have any questions, feel free to fill out the form or reach out to me through any of the methods below. We can work together!",
     btn_submit: "Submit",
     msg_form: "Form submitted successfully",
-    t_projects: "All of my projects"
+    t_projects: "All of my projects",
+    footer: "2024 - Juan Pablo Caceres, all rights reserved",
+    pl_name: "Enter your name",
+    pl_email: "Enter your email",
+    pl_phone: "Enter your phone"
   },
-  es : {
+  ES : {
     m_home: "Inicio",
     m_about: "Sobre mí",
     m_skills: "Habilidades",
     m_work: "Proyectos",
     m_contact: "Contacto",
     h_name_1: "SOY",
-    h_ocupacion: "Desarrollador Full-Stack",
-    h_ocupacion_2: "Diseñador Web",
-    h_contacto: "Contáctame",
+    h_job: "Desarrollador Full-Stack",
+    h_job_2: "Diseñador Web",
+    h_contact: "Contáctame",
     p_about: "Tengo 19 años y estoy estudiando la carrera de Analista de Sistemas. Me apasiona el Desarrollo Full-Stack y el Diseño Web. Me dedico principalmente a realizar landing pages para empresas o emprendimientos.",
-    btn_cv: "Mi CV",
-    t_habs: "Habilidades",
-    t_trabajo: "Mis proyectos",
-    proyecto_1: "Proyecto 1",
+    btn_about: "Mi CV",
+    t_skills: "Habilidades",
+    t_work: "Mis proyectos",
+    project_1: "Proyecto 1",
     d_project_1: "Portafolio personal en el que muestro mis proyectos y las tecnologías que uso. Además, el espectador puede descargar mi CV y ​​contactarme a través de un formulario.",
-    opcion_1: "Ver página",
-    opcion_2: "Ver código",
-    proyecto_2: "Proyecto 2",
-    d_proyecto_2: "Este fue un proyecto que hice para la parte Front-End del curso Codo a Codo llamado 'Full-Stack Python'. Básicamente, este es un clon de la GUI de la página de Netflix que incluye un formulario de registro que tiene validación de datos.",
-    proyecto_3: "Proyecto 3",
-    d_proyecto_3: "Esta es una página sencilla que rinde homenaje a la reconocida banda Pescado Rabioso. En esa página experimenté mucho con el DOM en JavaScript.",
-    btn_ver_todo: "Ver todos",
-    t_formulario: "Deja un mensaje",
-    d_formulario: "Si está interesado en trabajar conmigo o tiene alguna pregunta, no dude en completar el formulario o comunicarse conmigo a través de cualquiera de los métodos siguientes. ¡Podemos trabajar juntos!",
-    btn_enviar: "Enviar",
-    msg_formulario: "Formulario enviado correctamente",
-    t_proyectos: "Todos mis proyectos"
+    option_1: "Ver página",
+    option_2: "Ver código",
+    project_2: "Proyecto 2",
+    d_project_2: "Este fue un proyecto que hice para la parte Front-End del curso Codo a Codo llamado 'Full-Stack Python'. Básicamente, este es un clon de la GUI de la página de Netflix que incluye un formulario de registro que tiene validación de datos.",
+    project_3: "Proyecto 3",
+    d_project_3: "Esta es una página sencilla que rinde homenaje a la reconocida banda Pescado Rabioso. En esa página experimenté mucho con el DOM en JavaScript.",
+    btn_view_all: "Ver todos",
+    t_form: "Deja un mensaje",
+    d_form: "Si está interesado en trabajar conmigo o tiene alguna pregunta, no dude en completar el formulario o comunicarse conmigo a través de cualquiera de los métodos siguientes. ¡Podemos trabajar juntos!",
+    btn_submit: "Enviar",
+    msg_form: "Formulario enviado correctamente",
+    t_projects: "Todos mis proyectos",
+    footer: "2024 - Juan Pablo Caceres, todos los derechos reservados",
+    pl_name: "Ingresa tu nombre",
+    pl_email: "Ingresa tu email",
+    pl_phone: "Ingresa tu teléfono"
   }
 }
+
+// Lógica para cambiar de idioma
+const languageSelector = document.getElementById("language");
+
+// Función para cambiar el idioma
+function changeLanguage(lang){
+  const elementsToTranslate = document.querySelectorAll("[data-translate]");
+
+  elementsToTranslate.forEach((element) => {
+    const key = element.getAttribute("data-translate");
+    if (key && translations[lang][key]){
+      if (element.placeholder){
+        element.setAttribute("placeholder", translations[lang][key]);
+      }
+      else{
+        element.textContent = translations[lang][key];
+      }
+    } 
+    else{
+      console.warn(`No se encontró traducción para la clave: ${key}`)
+    }
+  });
+}
+
+// Detectar cambio de idioma
+languageSelector.addEventListener("change", (e) => {
+  const selectedLanguage = e.target.value;
+  changeLanguage(selectedLanguage);
+
+  // Guardar idioma seleccionado en el Local Storage
+  localStorage.setItem("language", selectedLanguage);
+});
+
+// Cargar el idioma guardado desde el Local Storage
+document.addEventListener("DOMContentLoaded", () => {
+  const savedLanguage = localStorage.getItem("language") || "EN";
+  languageSelector.value = savedLanguage;
+  changeLanguage(savedLanguage);
+});

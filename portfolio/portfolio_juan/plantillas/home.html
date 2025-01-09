@@ -12,10 +12,10 @@
             <a href="#"><i class="fa-brands fa-discord"></i></a>
         </div>
         <div class="text-home animated fadeInUp">
-            <h2>I'M <span class="name-home">Juan Pablo</span></h2>
-            <h3>Full-Stack Developer</h3>
-            <h3>Web Designer</h3>
-            <a class="hire-me-btn" href="#contact">Hire me</a>
+            <h2 data-translate="h_name_1">I'M <span class="name-home">Juan Pablo</span></h2>
+            <h3 data-translate="h_job">Full-Stack Developer</h3>
+            <h3 data-translate="h_job_2">Web Designer</h3>
+            <a class="hire-me-btn" href="#contact" data-translate="h_contact">Hire me</a>
         </div>
         <div class="img-home animated fadeInUp">
             <img class="diseño-circulos" src="{% static 'img/Circle_diseño.png' %}" alt="Diseño de círculos">
@@ -27,15 +27,15 @@
     <section class="about-me fade-in" id="about-me">
         <div class="title-about">
             <img class="polygon-about" src="{% static 'img/Polygon 1.png' %}" alt="Polígono para diseño">
-            <h2>About me</h2>
+            <h2 data-translate="m_about">About me</h2>
         </div>
         <div class="container-text-img">
             <div class="img-about">
                 <img src="{% static 'img/coding.jpg' %}" alt="Imagen de persona programando">
             </div>
             <div class="text-about">
-                <p>I'm 19 years old and I'm studying a career as a Systems Analyst. I'm passionate about full-stack development and web design. I mainly dedicate myself to making landing pages for companies or ventures.  </p>
-                <a class="btn-resume" href="{% static 'pdfs/CV_1.pdf' %}" download="mi_cv.pdf">My resume</a>
+                <p data-translate="p_about">I'm 19 years old and I'm studying a career as a Systems Analyst. I'm passionate about full-stack development and web design. I mainly dedicate myself to making landing pages for companies or ventures.  </p>
+                <a class="btn-resume" href="{% static 'pdfs/CV_1.pdf' %}" download="mi_cv.pdf" data-translate="btn_about">My resume</a>
             </div>
         </div>
     </section>
@@ -44,7 +44,7 @@
     <section class="skills fade-in" id="skills">
         <div class="title-skills">
             <img class="design-skills" src="{% static 'img/Design-skills.png' %}" alt="Diseño de section skills">
-            <h2>My skills</h2>
+            <h2 data-translate="t_skills">My skills</h2>
             <img class="design-skills" src="{% static 'img/Design-skills.png' %}" alt="Diseño de section skills">
         </div>
         <div class="container-cards">
@@ -137,16 +137,16 @@
     <section class="work fade-in" id="work">
         
         <div class="title-design-work">
-            <h2 class="title-work">Work</h2>
+            <h2 class="title-work" data-translate="t_work">Work</h2>
             <img src="{% static 'img/design-work.png' %}" alt="Diseño svg para sección de proyectos">
         </div>
         <div class="projects">
             <div class="project">
                 <div class="text-container-project">
                     <div class="text-project">
-                        <h2 class="title-project">Project 1</h2>
+                        <h2 class="title-project" data-translate="project_1">Project 1</h2>
                         <h3>Portfolio</h3>
-                        <p>Personal portfolio in which I show my projects and the technologies I use. Additionally, the viewer can download my CV and contact me through a form.</p>
+                        <p data-translate="d_project_1">Personal portfolio in which I show my projects and the technologies I use. Additionally, the viewer can download my CV and contact me through a form.</p>
                     </div>
                     <div class="labels-project">
                         <div class="label">
@@ -162,11 +162,11 @@
                     <div class="options-project">
                         <div class="option-live">
                             <i class="fa-solid fa-link"></i>
-                            <p>Live Preview</p>
+                            <p data-translate="option_1">Live Preview</p>
                         </div>
                         <div class="option-github">
                             <i class="fa-brands fa-github"></i>
-                            <a href="https://github.com/JuanCaceres18/portfolio" target="_blank">View Code</a>
+                            <a href="https://github.com/JuanCaceres18/portfolio" target="_blank" data-translate="option_2">View Code</a>
                         </div>
                     </div>
                 </div>
@@ -177,9 +177,9 @@
             <div class="project">
                 <div class="text-container-project">
                     <div class="text-project">
-                        <h2 class="title-project">Project 2</h2>
+                        <h2 class="title-project" data-translate="project_2">Project 2</h2>
                         <h3>Netflix Clon</h3>
-                        <p>This was a project I did for the Front-End part of the Codo a Codo course called "Full-Stack Python". Basically, this is a clone of the Netflix page GUI including a registration form that has data validation</p>
+                        <p data-translate="d_project_2">This was a project I did for the Front-End part of the Codo a Codo course called "Full-Stack Python". Basically, this is a clone of the Netflix page GUI including a registration form that has data validation</p>
                     </div>
                     <div class="labels-project">
                         <div class="label">
@@ -195,11 +195,11 @@
                     <div class="options-project">
                         <div class="option-live">
                             <i class="fa-solid fa-link"></i>
-                            <p>Live Preview</p>
+                            <p data-translate="option_1">Live Preview</p>
                         </div>
                         <div class="option-github">
                             <i class="fa-brands fa-github"></i>
-                            <p>View Code</p>
+                            <p data-translate="option_2">View Code</p>
                         </div>
                     </div>
                 </div>
@@ -210,9 +210,9 @@
             <div class="project">
                 <div class="text-container-project">
                     <div class="text-project">
-                        <h2 class="title-project">Project 3</h2>
+                        <h2 class="title-project" data-translate="project_3">Project 3</h2>
                         <h3>Pescado Rabioso</h3>
-                        <p>This is a simple page that honors the renowned band Pescado Rabioso. On that page I experimented a lot with the DOM in JavaScript.</p>
+                        <p data-translate="d_project_3">This is a simple page that honors the renowned band Pescado Rabioso. On that page I experimented a lot with the DOM in JavaScript.</p>
                     </div>
                     <div class="labels-project">
                         <div class="label">
@@ -228,11 +228,11 @@
                     <div class="options-project">
                         <div class="option-live">
                             <i class="fa-solid fa-link"></i>
-                            <p>Live Preview</p>
+                            <p data-translate="option_1">Live Preview</p>
                         </div>
                         <div class="option-github">
                             <i class="fa-brands fa-github"></i>
-                            <p>View Code</p>
+                            <p data-translate="option_2">View Code</p>
                         </div>
                     </div>
                 </div>
@@ -241,7 +241,7 @@
                 </div>
             </div>
         </div>
-        <a href="{% url 'view_projects' %}" class="btn-view-all">View All</a>
+        <a href="{% url 'view_projects' %}" class="btn-view-all" data-translate="btn_view_all">View All</a>
         
     </section>
 
@@ -249,14 +249,14 @@
     <section class="contact fade-in" id="contact">
         <div class="main-text-contact">
             <img class="arrow-contact"  src="{% static 'img/arrow-right.png' %}" alt="Flecha derecha diseño de la sección de contacto">
-            <h2>Contact Me</h2>
+            <h2 data-translate="m_contact">Contact Me</h2>
             <img class="arrow-contact"  src="{% static 'img/arrow-left.png' %}" alt="Flecha izquierda diseño de la sección de contacto">
         </div>
         <div class="global-container-contact">
             <div class="text-container-contact">
                 <div class="text-contact">
-                    <h3>Drop a message</h3>
-                    <p>If you're interested in working with me or have any questions, feel free to fill out the form or reach out to me through any of the methods below. We can work together!</p>
+                    <h3 data-translate="t_form">Drop a message</h3>
+                    <p data-translate="d_form">If you're interested in working with me or have any questions, feel free to fill out the form or reach out to me through any of the methods below. We can work together!</p>
                 </div>
                 <div class="icons-contact">
                     <div class="icon-phone">
@@ -273,12 +273,12 @@
                 <input type="text" id="name" placeholder="Enter your name">
                 <input type="email" id="email" placeholder="Enter your email">
                 <input type="number" id="phone" placeholder="Enter your phone">
-                <button class="btn-submit-contact">Submit</button>
+                <button class="btn-submit-contact" data-translate="btn_submit">Submit</button>
             </form>            
         </div>
         <div id="fondoNegro">
             <div id="mensajeExito" class="fade-in">
-                <p class="msgForm fade-in">Form submitted successfully</p>
+                <p class="msgForm fade-in" data-translate="msg_form">Form submitted successfully</p>
                 <i class="fa-solid fa-thumbs-up icon-form fade-in"></i>
             </div>
         </div>

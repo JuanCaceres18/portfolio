@@ -18,10 +18,10 @@
                     <h1 class="animated fadeInUp"><span class="arrow-h1">&lt;</span>Juan<span class="arrow-h1">/&gt;</span></h1>
                 </div>
                 <div class="text-header-left animated fadeInUp">
-                    <li><a href="{% url 'home' %}#" class="hvr-underline-from-left">Home</a></li>
-                    <li><a href="{% url 'home' %}#about-me" class="hvr-underline-from-left">About me</a></li>
-                    <li><a href="{% url 'home' %}#skills" class="hvr-underline-from-left">Skills</a></li>
-                    <li><a href="{% url 'home' %}#work" class="hvr-underline-from-left">Work</a></li>
+                    <li><a href="{% url 'home' %}#" class="hvr-underline-from-left" data-translate="m_home">Home</a></li>
+                    <li><a href="{% url 'home' %}#about-me" class="hvr-underline-from-left" data-translate="m_about">About me</a></li>
+                    <li><a href="{% url 'home' %}#skills" class="hvr-underline-from-left" data-translate="m_skills">Skills</a></li>
+                    <li><a href="{% url 'home' %}#work" class="hvr-underline-from-left" data-translate="m_work">Work</a></li>
                 </div>
             </ul>
             <ul class="right animated fadeInUp">
@@ -29,7 +29,7 @@
                     <option value="EN">EN</option>
                     <option value="ES">ES</option>
                 </select>
-                <a class="btn-contact" href="#contact">Contact</a>
+                <a class="btn-contact" href="#contact" data-translate="m_contact">Contact</a>
             </ul>
         </nav>
     </header>
@@ -42,7 +42,7 @@
     <!-- Footer -->
     <footer>
         <h1><span class="arrow-h1">&lt;</span>Juan<span class="arrow-h1">/&gt;</span></h1>
-        <p>2024 - Juan Pablo Caceres, all rights reserverd </p>
+        <p data-translate="footer">2024 - Juan Pablo Caceres, all rights reserverd</p>
     </footer>
 
     <script src="{% static 'js/main.js' %}"></script>
