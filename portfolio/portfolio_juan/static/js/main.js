@@ -22,76 +22,78 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Validación de datos en contact
 const sectionContact = document.getElementById("contact");
-const containerContact = sectionContact.querySelector(".global-container-contact");
-const formContact = containerContact.querySelector(".form-container");
-const name = formContact.querySelector("#name");
-const email = formContact.querySelector("#email");
-const number = formContact.querySelector("#phone");
-const botonSubmit = formContact.querySelector(".btn-submit-contact");
+if (sectionContact){
+  const containerContact = sectionContact.querySelector(".global-container-contact");
+  const formContact = containerContact.querySelector(".form-container");
+  const name = formContact.querySelector("#name");
+  const email = formContact.querySelector("#email");
+  const number = formContact.querySelector("#phone");
+  const botonSubmit = formContact.querySelector(".btn-submit-contact");
 
-console.log(name);
+  console.log(name);
 
-formContact.addEventListener("submit", (e) =>{
-  let isValid = true;
-  e.preventDefault();
-  if (!name.value.trim()){
-    name.style.borderBottom = "5px solid red";
-    isValid = false;
-  }
-  else{
-    name.style.borderBottom = "5px solid #F2C94C";
-  }
-  if (!email.value.trim() || !email.value.includes("@")){
-    email.style.borderBottom = "5px solid red";
-    isValid = false;
-  }
-  else{
-    email.style.borderBottom = "5px solid #F2C94C";
-  }
-  if (!number.value.trim()){
-    number.style.borderBottom = "5px solid red";
-    isValid = false;
-  }
-  else{
-    number.style.borderBottom = "5px solid #F2C94C";
-  }
-
-  if (!isValid){
+  formContact.addEventListener("submit", (e) =>{
+    let isValid = true;
     e.preventDefault();
-    return;
-  }
-  
-  mostrarMensaje();
+    if (!name.value.trim()){
+      name.style.borderBottom = "5px solid red";
+      isValid = false;
+    }
+    else{
+      name.style.borderBottom = "5px solid #F2C94C";
+    }
+    if (!email.value.trim() || !email.value.includes("@")){
+      email.style.borderBottom = "5px solid red";
+      isValid = false;
+    }
+    else{
+      email.style.borderBottom = "5px solid #F2C94C";
+    }
+    if (!number.value.trim()){
+      number.style.borderBottom = "5px solid red";
+      isValid = false;
+    }
+    else{
+      number.style.borderBottom = "5px solid #F2C94C";
+    }
 
-  function mostrarMensaje(){
-    const mensajeExito = document.getElementById("mensajeExito");
-    const fondoNegro = document.getElementById("fondoNegro");
-    sectionContact.scrollIntoView({ behavior: "smooth" });
-    // document.body.style.overflow = "hidden";
-    fondoNegro.style.display = "flex";
-    mensajeExito.style.display = "block";
-    document.body.classList.add("no-scroll");
-    setTimeout(() => {
-      fondoNegro.style.display = "none";
-      mensajeExito.style.display = "none";
-      document.body.classList.remove("no-scroll");
-    }, 2000);
-    limpiarFormulario();
-  }
+    if (!isValid){
+      e.preventDefault();
+      return;
+    }
 
-  function limpiarFormulario(){
-    name.value = "";
-    email.value = "";
-    number.value = "";
-  }
-})
+    mostrarMensaje();
 
+    function mostrarMensaje(){
+      const mensajeExito = document.getElementById("mensajeExito");
+      const fondoNegro = document.getElementById("fondoNegro");
+      sectionContact.scrollIntoView({ behavior: "smooth" });
+      // document.body.style.overflow = "hidden";
+      fondoNegro.style.display = "flex";
+      mensajeExito.style.display = "block";
+      document.body.classList.add("no-scroll");
+      setTimeout(() => {
+        fondoNegro.style.display = "none";
+        mensajeExito.style.display = "none";
+        document.body.classList.remove("no-scroll");
+      }, 2000);
+      limpiarFormulario();
+    }
+
+    function limpiarFormulario(){
+      name.value = "";
+      email.value = "";
+      number.value = "";
+    }
+  })
+}
 
 // Cambiar idioma de la página
 // Guardar traducciones según el idioma
 const translations = {
   EN: {
     m_home: "Home",
+    name_home: "Juan Pablo",
     m_about: "About me",
     m_skills: "Skills",
     m_work: "Work",
@@ -163,7 +165,9 @@ const languageSelector = document.getElementById("language");
 
 // Función para cambiar el idioma
 function changeLanguage(lang){
+  console.log("Objeto translations:", translations);
   const elementsToTranslate = document.querySelectorAll("[data-translate]");
+  console.log("Elementos detectados para traducir: ", elementsToTranslate);
 
   elementsToTranslate.forEach((element) => {
     const key = element.getAttribute("data-translate");
@@ -195,4 +199,5 @@ document.addEventListener("DOMContentLoaded", () => {
   const savedLanguage = localStorage.getItem("language") || "EN";
   languageSelector.value = savedLanguage;
   changeLanguage(savedLanguage);
+  console.log("Cargado...");
 });
