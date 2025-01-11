@@ -385,16 +385,14 @@ select{
     display: flex;
     gap: 9px;
 }
-.option-live, .option-github{
-    color: white;
-    font-size: 23px;
-}
-.option-live p, .option-github a{
+.option-live a, .option-github a{
     text-decoration: underline;
     font-size: 23px;
     cursor: pointer;
+    color: white;
 }
-.option-github a{
+.option-live i, .option-github i{
+    font-size: 30px;
     color: white;
 }
 .img-container{

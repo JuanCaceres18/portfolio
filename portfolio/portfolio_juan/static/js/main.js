@@ -98,7 +98,7 @@ const translations = {
     m_skills: "Skills",
     m_work: "Work",
     m_contact: "Contact",
-    h_name_1: "I'M",
+    h_name_1: "I'M <span class='name-home'>Juan Pablo</span>",
     h_job: "Full-Stack Developer",
     h_job_2: "Web Designer",
     h_contact: "Hire me",
@@ -123,7 +123,8 @@ const translations = {
     footer: "2024 - Juan Pablo Caceres, all rights reserved",
     pl_name: "Enter your name",
     pl_email: "Enter your email",
-    pl_phone: "Enter your phone"
+    pl_phone: "Enter your phone",
+    search: "Search"
   },
   ES : {
     m_home: "Inicio",
@@ -131,7 +132,7 @@ const translations = {
     m_skills: "Habilidades",
     m_work: "Proyectos",
     m_contact: "Contacto",
-    h_name_1: "SOY",
+    h_name_1: "SOY <span class='name-home'>Juan Pablo</span>",
     h_job: "Desarrollador Full-Stack",
     h_job_2: "Diseñador Web",
     h_contact: "Contáctame",
@@ -156,7 +157,8 @@ const translations = {
     footer: "2024 - Juan Pablo Caceres, todos los derechos reservados",
     pl_name: "Ingresa tu nombre",
     pl_email: "Ingresa tu email",
-    pl_phone: "Ingresa tu teléfono"
+    pl_phone: "Ingresa tu teléfono",
+    search: "Buscar"
   }
 }
 
@@ -167,6 +169,7 @@ const languageSelector = document.getElementById("language");
 function changeLanguage(lang){
   console.log("Objeto translations:", translations);
   const elementsToTranslate = document.querySelectorAll("[data-translate]");
+
   console.log("Elementos detectados para traducir: ", elementsToTranslate);
 
   elementsToTranslate.forEach((element) => {
@@ -176,7 +179,7 @@ function changeLanguage(lang){
         element.setAttribute("placeholder", translations[lang][key]);
       }
       else{
-        element.textContent = translations[lang][key];
+        element.innerHTML = translations[lang][key];
       }
     } 
     else{
