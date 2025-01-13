@@ -1,5 +1,6 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from .forms import ContactForm
+from .models import User
 
 # Create your views here.
 def home(request):
@@ -11,12 +12,13 @@ def view_projects(request):
 # Manejar formulario de contacto
 def contact_view(request):
     if request.method == "POST":
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            form.save() # Guardo los datos en la ddbb 
-            return redirect('success')
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        
+        if name and email and phone:
+            user = User.create(name=name, email=email, phone=phone)
+            user.save()
     
-    else:
-        form = ContactForm()
-    
-    return render(request, 'home.html', {'form': form})
+    return render(request, "home.html")
+

@@ -7,6 +7,6 @@ class User(models.Model):
     phone = models.CharField(max_length = 55, null=False)
     
     def __str__(self):
-        return f'{self.nombre} - {self.email}'
+        return f'{self.name} - {self.email} - {self.phone}'
 
 
