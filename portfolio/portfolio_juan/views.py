@@ -12,11 +12,10 @@ def view_projects(request):
 # Manejar formulario de contacto
 def contact_view(request):
     if request.method == "POST":
-        print(f"Received data: name={name}, email={email}, phone={phone}")
         name = request.POST.get('name')
         email = request.POST.get('email')
         phone = request.POST.get('phone')
-        
+        print(f"Received data: name={name}, email={email}, phone={phone}")
         User.objects.create(name=name, email=email, phone=phone)
         return render(request, "contact_success.html")
         
