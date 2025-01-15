@@ -271,10 +271,10 @@
             </div>
             <form class="form-container" method="POST" action="{% url 'contact' %}">
                 {% csrf_token %}
-                <input type="text" id="name" placeholder="Enter your name" data-translate="pl_name">
-                <input type="email" id="email" placeholder="Enter your email" data-translate="pl_email">
-                <input type="number" id="phone" placeholder="Enter your phone" data-translate="pl_phone">
-                <button class="btn-submit-contact" data-translate="btn_submit">Submit</button>
+                <input type="text" name="name" id="name" placeholder="Enter your name" data-translate="pl_name">
+                <input type="email" name="email" id="email" placeholder="Enter your email" data-translate="pl_email">
+                <input type="number" name="phone" id="phone" placeholder="Enter your phone" data-translate="pl_phone">
+                <button class="btn-submit-contact" data-translate="btn_submit" type="submit">Submit</button>
             </form>            
         </div>
         <div id="fondoNegro">
