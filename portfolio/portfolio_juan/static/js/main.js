@@ -62,7 +62,9 @@ if (sectionContact){
       return;
     }
 
+
     mostrarMensaje();
+    formContact.submit();
 
     function mostrarMensaje(){
       const mensajeExito = document.getElementById("mensajeExito");
