@@ -271,9 +271,9 @@
             </div>
             <form class="form-container" method="POST" action="{% url 'contact' %}" novalidate>
                 {% csrf_token %}
-                <input type="text" name="name" id="name" placeholder="Enter your name" data-translate="pl_name">
-                <input type="email" name="email" id="email" placeholder="Enter your email" data-translate="pl_email">
-                <input type="number" name="phone" id="phone" placeholder="Enter your phone" data-translate="pl_phone">
+                <input type="text" name="i_name" id="name" placeholder="Enter your name" data-translate="pl_name">
+                <input type="email" name="i_email" id="email" placeholder="Enter your email" data-translate="pl_email">
+                <input type="number" name="i_phone" id="phone" placeholder="Enter your phone" data-translate="pl_phone">
                 <button class="btn-submit-contact" data-translate="btn_submit" type="submit">Submit</button>
             </form>            
         </div>

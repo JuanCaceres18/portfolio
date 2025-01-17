@@ -11,9 +11,10 @@ def view_projects(request):
 # Manejar formulario de contacto
 def contact_view(request):
     if request.method == "POST":
-        name = request.POST.get('name', '').strip()
-        email = request.POST.get('email', '').strip()
-        phone = request.POST.get('phone', '').strip()
+        print(request.POST)
+        name = request.POST.get('i_name', '').strip()
+        email = request.POST.get('i_email', '').strip()
+        phone = request.POST.get('i_phone', '').strip()
         print(f"Received data: name={name}, email={email}, phone={phone}")
 
         # Valido que los datos no estén vacíos

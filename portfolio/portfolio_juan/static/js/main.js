@@ -21,74 +21,89 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Validación de datos en contact
-const sectionContact = document.getElementById("contact");
-if (sectionContact){
-  const containerContact = sectionContact.querySelector(".global-container-contact");
-  const formContact = containerContact.querySelector(".form-container");
-  const name = formContact.querySelector("#name");
-  const email = formContact.querySelector("#email");
-  const number = formContact.querySelector("#phone");
-  const botonSubmit = formContact.querySelector(".btn-submit-contact");
+formContact.addEventListener("submit", (e) => {
+  e.preventDefault(); // Evita la recarga automática del formulario
 
-  console.log(name);
+  // Validaciones del formulario
+  let isValid = true;
 
-  formContact.addEventListener("submit", (e) =>{
-    let isValid = true;
-    e.preventDefault();
-    if (!name.value.trim()){
-      name.style.borderBottom = "5px solid red";
-      isValid = false;
-    }
-    else{
-      name.style.borderBottom = "5px solid #F2C94C";
-    }
-    if (!email.value.trim() || !email.value.includes("@")){
-      email.style.borderBottom = "5px solid red";
-      isValid = false;
-    }
-    else{
-      email.style.borderBottom = "5px solid #F2C94C";
-    }
-    if (!number.value.trim()){
-      number.style.borderBottom = "5px solid red";
-      isValid = false;
-    }
-    else{
-      number.style.borderBottom = "5px solid #F2C94C";
-    }
+  if (!name.value.trim()) {
+    name.style.borderBottom = "5px solid red";
+    isValid = false;
+  } else {
+    name.style.borderBottom = "5px solid #F2C94C";
+  }
 
-    if (!isValid){
-      e.preventDefault();
-      return;
-    }
+  if (!email.value.trim() || !email.value.includes("@")) {
+    email.style.borderBottom = "5px solid red";
+    isValid = false;
+  } else {
+    email.style.borderBottom = "5px solid #F2C94C";
+  }
 
+  if (!number.value.trim()) {
+    number.style.borderBottom = "5px solid red";
+    isValid = false;
+  } else {
+    number.style.borderBottom = "5px solid #F2C94C";
+  }
 
-    mostrarMensaje();
-    formContact.submit();
+  // Si las validaciones fallan, no enviar
+  if (!isValid) {
+    return;
+  }
 
-    function mostrarMensaje(){
-      const mensajeExito = document.getElementById("mensajeExito");
-      const fondoNegro = document.getElementById("fondoNegro");
-      sectionContact.scrollIntoView({ behavior: "smooth" });
-      // document.body.style.overflow = "hidden";
-      fondoNegro.style.display = "flex";
-      mensajeExito.style.display = "block";
-      document.body.classList.add("no-scroll");
-      setTimeout(() => {
-        fondoNegro.style.display = "none";
-        mensajeExito.style.display = "none";
-        document.body.classList.remove("no-scroll");
-      }, 2000);
-      limpiarFormulario();
-    }
+  // Crear objeto con los datos del formulario
+  const formData = new FormData(formContact);
 
-    function limpiarFormulario(){
-      name.value = "";
-      email.value = "";
-      number.value = "";
-    }
+  // Enviar datos al backend usando fetch
+  fetch(formContact.action, {
+    method: "POST",
+    body: formData,
   })
-}
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Error al enviar el formulario");
+      }
+      return response.text(); // Puedes cambiar esto si el backend retorna JSON
+    })
+    .then((data) => {
+      // Mostrar el mensaje de éxito
+      mostrarMensaje();
+
+      // Recargar la página después de mostrar el mensaje
+      setTimeout(() => {
+        window.location.href = formContact.action; // Redirigir al home
+      }, 2000);
+    })
+    .catch((error) => {
+      console.error("Error al enviar el formulario:", error);
+    });
+  });
+
+  function mostrarMensaje() {
+    const mensajeExito = document.getElementById("mensajeExito");
+    const fondoNegro = document.getElementById("fondoNegro");
+    sectionContact.scrollIntoView({ behavior: "smooth" });
+    fondoNegro.style.display = "flex";
+    mensajeExito.style.display = "block";
+    document.body.classList.add("no-scroll");
+
+    setTimeout(() => {
+      fondoNegro.style.display = "none";
+      mensajeExito.style.display = "none";
+      document.body.classList.remove("no-scroll");
+
+      limpiarFormulario();
+    }, 2000);
+
+  }
+
+  function limpiarFormulario() {
+    name.value = "";
+    email.value = "";
+    number.value = "";
+  }
 
 // Cambiar idioma de la página
 // Guardar traducciones según el idioma
