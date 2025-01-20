@@ -1,3 +1,4 @@
+from django.http import JsonResponse
 from django.shortcuts import render
 from .models import User
 
@@ -20,6 +21,9 @@ def contact_view(request):
         # Valido que los datos no estén vacíos
         if name and email and phone:
             User.objects.create(name=name, email=email, phone=phone)
+            return JsonResponse({"success": True, "message": "Formulario enviado correctamente."})
+
         else:
-            print("Datos inválidos")
-        return render(request, "home.html")
+            return JsonResponse({"success": False, "message": "Todos los campos son obligatorios."})
+
+    return render(request, "home.html")

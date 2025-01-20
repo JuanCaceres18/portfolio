@@ -20,47 +20,54 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Validación de datos en contact
-formContact.addEventListener("submit", (e) => {
-  e.preventDefault(); // Evita la recarga automática del formulario
+const formContact = document.querySelector(".form-container");
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const numberInput = document.getElementById("phone");
+const sectionContact = document.getElementById("contact");
 
-  // Validaciones del formulario
-  let isValid = true;
+if (formContact){
+  // Validación de datos en contact
+  formContact.addEventListener("submit", (e) => {
+    e.preventDefault(); // Evita la recarga automática del formulario
 
-  if (!name.value.trim()) {
-    name.style.borderBottom = "5px solid red";
-    isValid = false;
-  } else {
-    name.style.borderBottom = "5px solid #F2C94C";
-  }
+    // Validaciones del formulario
+    let isValid = true;
 
-  if (!email.value.trim() || !email.value.includes("@")) {
-    email.style.borderBottom = "5px solid red";
-    isValid = false;
-  } else {
-    email.style.borderBottom = "5px solid #F2C94C";
-  }
+    if (!nameInput.value.trim()) {
+      nameInput.style.borderBottom = "5px solid red";
+      isValid = false;
+    } else {
+      nameInput.style.borderBottom = "5px solid #F2C94C";
+    }
 
-  if (!number.value.trim()) {
-    number.style.borderBottom = "5px solid red";
-    isValid = false;
-  } else {
-    number.style.borderBottom = "5px solid #F2C94C";
-  }
+    if (!emailInput.value.trim() || !email.value.includes("@")) {
+      emailInput.style.borderBottom = "5px solid red";
+      isValid = false;
+    } else {
+      emailInput.style.borderBottom = "5px solid #F2C94C";
+    }
 
-  // Si las validaciones fallan, no enviar
-  if (!isValid) {
-    return;
-  }
+    if (!numberInput.value.trim()) {
+      numberInput.style.borderBottom = "5px solid red";
+      isValid = false;
+    } else {
+      numberInput.style.borderBottom = "5px solid #F2C94C";
+    }
 
-  // Crear objeto con los datos del formulario
-  const formData = new FormData(formContact);
+    // Si las validaciones fallan, no enviar
+    if (!isValid) {
+      return;
+    }
 
-  // Enviar datos al backend usando fetch
-  fetch(formContact.action, {
-    method: "POST",
-    body: formData,
-  })
+    // Crear objeto con los datos del formulario
+    const formData = new FormData(formContact);
+
+    // Enviar datos al backend usando fetch
+    fetch(formContact.action, {
+      method: "POST",
+      body: formData,
+    })
     .then((response) => {
       if (!response.ok) {
         throw new Error("Error al enviar el formulario");
@@ -70,7 +77,6 @@ formContact.addEventListener("submit", (e) => {
     .then((data) => {
       // Mostrar el mensaje de éxito
       mostrarMensaje();
-
       // Recargar la página después de mostrar el mensaje
       setTimeout(() => {
         window.location.href = formContact.action; // Redirigir al home
@@ -80,30 +86,27 @@ formContact.addEventListener("submit", (e) => {
       console.error("Error al enviar el formulario:", error);
     });
   });
+}
 
-  function mostrarMensaje() {
-    const mensajeExito = document.getElementById("mensajeExito");
-    const fondoNegro = document.getElementById("fondoNegro");
-    sectionContact.scrollIntoView({ behavior: "smooth" });
-    fondoNegro.style.display = "flex";
-    mensajeExito.style.display = "block";
-    document.body.classList.add("no-scroll");
-
-    setTimeout(() => {
-      fondoNegro.style.display = "none";
-      mensajeExito.style.display = "none";
-      document.body.classList.remove("no-scroll");
-
-      limpiarFormulario();
-    }, 2000);
-
-  }
-
-  function limpiarFormulario() {
-    name.value = "";
-    email.value = "";
-    number.value = "";
-  }
+function mostrarMensaje() {
+  const mensajeExito = document.getElementById("mensajeExito");
+  const fondoNegro = document.getElementById("fondoNegro");
+  sectionContact.scrollIntoView({ behavior: "smooth" });
+  fondoNegro.style.display = "flex";
+  mensajeExito.style.display = "block";
+  document.body.classList.add("no-scroll");
+  setTimeout(() => {
+    fondoNegro.style.display = "none";
+    mensajeExito.style.display = "none";
+    document.body.classList.remove("no-scroll");
+    limpiarFormulario();
+  }, 2000);
+}
+function limpiarFormulario() {
+  name.value = "";
+  email.value = "";
+  number.value = "";
+}
 
 // Cambiar idioma de la página
 // Guardar traducciones según el idioma
@@ -141,7 +144,9 @@ const translations = {
     pl_name: "Enter your name",
     pl_email: "Enter your email",
     pl_phone: "Enter your phone",
-    search: "Search"
+    search: "Search",
+    d_a_project_1: "Personal portfolio in which I show my projects and the technologies I use. Additionally, the viewer can download my CV and contact me through a form. This page was made with Django.",
+    d_a_project_2: "This is a simple page that honors the renowned band Pescado Rabioso and that was made for the Junior Achievement program. On that page I experimented a lot with the DOM in JavaScript."
   },
   ES : {
     m_home: "Inicio",
@@ -175,7 +180,9 @@ const translations = {
     pl_name: "Ingresa tu nombre",
     pl_email: "Ingresa tu email",
     pl_phone: "Ingresa tu teléfono",
-    search: "Buscar"
+    search: "Buscar",
+    d_a_project_1: "Portafolio personal en el que muestro mis proyectos y las tecnologías que uso. Además, el espectador puede descargar mi CV y ​​contactarse conmigo a través de un formulario. Esta página fue hecha con Django.",
+    d_a_project_2: "Esta es una página sencilla que rinde homenaje a la reconocida banda Pescado Rabioso y que fue realizada para el programa Junior Achievement. En esa página experimenté mucho con el DOM en JavaScript."
   }
 }
 
