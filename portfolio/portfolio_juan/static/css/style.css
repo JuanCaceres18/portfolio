@@ -746,14 +746,14 @@ input[type="search"]::-webkit-search-cancel-button {
     margin-top: 10px;
     width: 80%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
     margin-bottom: 30px;
+    gap: 20px;
     justify-items: center;
 }
 .card-project{
-    width: 74.4%;
-    height: 100%;
+    width: 89%;
     background: #3D3E42;
     display: flex;
     flex-direction: column;
@@ -762,13 +762,15 @@ input[type="search"]::-webkit-search-cancel-button {
     overflow: hidden;
     cursor: pointer;
     transition: 0.5s ease;
+    min-height: 350px;
+    height: auto;
 }
 .card-project:hover{
     transform: translateY(-5px);
     box-shadow: 5px 5px 40px black;
 }
 .container-img-project{
-    width: 270px;
+    width: 320px;
     height: 150px;
 }
 .container-img-project img{
