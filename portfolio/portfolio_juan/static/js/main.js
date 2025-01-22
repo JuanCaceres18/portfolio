@@ -147,6 +147,7 @@ const translations = {
     search: "Search",
     d_a_project_1: "Personal portfolio in which I show my projects and the technologies I use. Additionally, the viewer can download my CV and contact me through a form. This page was made with Django.",
     d_a_project_2: "This is a simple page that honors the renowned band Pescado Rabioso and that was made for the Junior Achievement program. On that page I experimented a lot with the DOM in JavaScript."
+    results_query: "There isn't results"
   },
   ES : {
     m_home: "Inicio",
@@ -182,7 +183,8 @@ const translations = {
     pl_phone: "Ingresa tu teléfono",
     search: "Buscar",
     d_a_project_1: "Portafolio personal en el que muestro mis proyectos y las tecnologías que uso. Además, el espectador puede descargar mi CV y ​​contactarse conmigo a través de un formulario. Esta página fue hecha con Django.",
-    d_a_project_2: "Esta es una página sencilla que rinde homenaje a la reconocida banda Pescado Rabioso y que fue realizada para el programa Junior Achievement. En esa página experimenté mucho con el DOM en JavaScript."
+    d_a_project_2: "Esta es una página sencilla que rinde homenaje a la reconocida banda Pescado Rabioso y que fue realizada para el programa Junior Achievement. En esa página experimenté mucho con el DOM en JavaScript.",
+    results_query: "No hay resultados"
   }
 }
 
@@ -227,4 +229,31 @@ document.addEventListener("DOMContentLoaded", () => {
   languageSelector.value = savedLanguage;
   changeLanguage(savedLanguage);
   console.log("Cargado...");
+});
+
+// Realizar filtrado de proyectos en JavaScript
+const searchInput = document.getElementById('search-input');
+const projectCards = document.querySelectorAll('.card-project');
+const pResults = document.getElementById("no-results");
+
+// Escuchar el evento de entrada en el buscador
+searchInput.addEventListener('input', function () {
+    const query = searchInput.value.toLowerCase(); // Convertimos a minúsculas para comparar
+    let hasResults = false;
+
+    projectCards.forEach(card => {
+        const title = card.querySelector('h3').innerText.toLowerCase(); // Obtenemos el título del proyecto
+
+        // Mostrar la tarjeta si el texto coincide con el título o la descripción
+        if (title.includes(query)) {
+            card.style.display = 'block';
+            hasResults = true;
+        } else {
+            card.style.display = 'none';
+        }
+    })
+
+    if (pResults){
+      pResults.style.display = hasResults ? "none" : "flex";
+    }
 });

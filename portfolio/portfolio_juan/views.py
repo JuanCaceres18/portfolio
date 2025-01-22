@@ -27,3 +27,5 @@ def contact_view(request):
             return JsonResponse({"success": False, "message": "Todos los campos son obligatorios."})
 
     return render(request, "home.html")
+
+
