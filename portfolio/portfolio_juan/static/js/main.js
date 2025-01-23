@@ -146,8 +146,8 @@ const translations = {
     pl_phone: "Enter your phone",
     search: "Search",
     d_a_project_1: "Personal portfolio in which I show my projects and the technologies I use. Additionally, the viewer can download my CV and contact me through a form. This page was made with Django.",
-    d_a_project_2: "This is a simple page that honors the renowned band Pescado Rabioso and that was made for the Junior Achievement program. On that page I experimented a lot with the DOM in JavaScript."
-    results_query: "There isn't results"
+    d_a_project_2: "This is a simple page that honors the renowned band Pescado Rabioso and that was made for the Junior Achievement program. On that page I experimented a lot with the DOM in JavaScript.",
+    results_query: "No matches found"
   },
   ES : {
     m_home: "Inicio",

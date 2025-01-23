@@ -49,7 +49,7 @@ nav{
 .left li a{
     color: white;
     text-decoration: none;
-    padding: 30px;
+    padding: 20px;
     font-weight: 300;
     font-size: 20px;
 }
@@ -453,7 +453,6 @@ select{
     display: flex;
     justify-content: center;
     width: 80%;
-    border-bottom: 5px solid #F2C94C;
     margin-top: 30px;
 
 }
@@ -533,6 +532,7 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-top: 5px solid #F2C94C;
     margin: 20px 130px 0px 130px;
 }
 footer h1{
@@ -817,4 +817,28 @@ input[type="search"]::-webkit-search-cancel-button {
     display: none;
     text-align: center;
     font-size: 25px;
+}
+
+/* Diseño responsive */
+/* Móviles pequeños */
+@media (max-width: 480px){
+    header .h1-header{
+        display: none;
+    }
+    header{
+        width: 600px;
+        display: flex;
+        justify-content: center;
+    }
+    header .left{
+        width: 100%;
+    }
+    header .text-header-left li{
+    }
+    header .btn-contact{
+        display: none;
+    }
+    .select{
+        font-size: 15px;
+    }
 }
