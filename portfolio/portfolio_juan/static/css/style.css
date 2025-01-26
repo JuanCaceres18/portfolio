@@ -822,23 +822,60 @@ input[type="search"]::-webkit-search-cancel-button {
 /* Diseño responsive */
 /* Móviles pequeños */
 @media (max-width: 480px){
-    header .h1-header{
-        display: none;
+    /* Header */
+    nav{
+        flex-direction: column;
+        gap: 20px;
     }
-    header{
-        width: 600px;
-        display: flex;
-        justify-content: center;
+    .left{
+        flex-direction: column;
+        width: 900px;
     }
-    header .left{
-        width: 100%;
-    }
-    header .text-header-left li{
-    }
-    header .btn-contact{
-        display: none;
-    }
-    .select{
+    .left li a{
         font-size: 15px;
+    }
+    .btn-contact{
+        display: none;
+    }
+    /* Section Home */
+    .img-home, .icons{
+        display: none;
+    }
+    .text-home{
+        width: 100%;
+        text-align: center;
+        gap: 10px;
+    }
+    .name-home{
+        display: block;
+    }
+    /* Section About Me */
+    .about-me{
+        margin-top: 5px;
+        height: 100vh;
+    }
+    .title-about{
+        text-align: center;
+    }
+    .polygon-about{
+        text-align: center;
+        padding-left: 20px;
+    }
+    .img-about{
+        display: none;
+    }
+    .text-about{
+        margin-top: 30px;
+        margin-right: 0px;
+        width: 70%;
+        justify-content: center;
+        align-items: center;
+    }
+    .text-about h2{
+        text-align: center;
+    }
+    /* Section Skills */
+    .design-skills{
+        width: 100px;
     }
 }
