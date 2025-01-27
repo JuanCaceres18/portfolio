@@ -823,16 +823,44 @@ input[type="search"]::-webkit-search-cancel-button {
 /* Móviles pequeños */
 @media (max-width: 480px){
     /* Header */
+    header{
+        margin: 0px;
+        max-width: 480px;
+        padding: 0px;
+    }
     nav{
         flex-direction: column;
-        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+        max-width: 480px;
     }
     .left{
         flex-direction: column;
-        width: 900px;
+        width: 100%;
+        max-width: 480px;
+        justify-content: center;
+        align-items: center;
+    }
+    .left li{
+        padding: 0px;
+        margin: 0px;
+    }
+    .h1-header{
+        width: 65%;
+    }
+    .h1-header h1{
+        padding: 0px;
+        margin: 0px;
+        text-align: center;
     }
     .left li a{
         font-size: 15px;
+        padding: 10px;
+        margin: 0px;
     }
     .btn-contact{
         display: none;
