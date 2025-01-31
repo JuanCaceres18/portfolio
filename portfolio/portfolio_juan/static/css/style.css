@@ -874,6 +874,9 @@ input[type="search"]::-webkit-search-cancel-button {
         margin: 0px;
         font-size: 30px;
     }
+    .right select option{
+        font-size: 12px;
+    }
     /* Section Home */
     .home{
         height: 55vh;
@@ -945,6 +948,10 @@ input[type="search"]::-webkit-search-cancel-button {
     }
     /* Section Skills */
     .design-skills{
-        width: 100px;
+        display: none;
+    }
+    .container-cards{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
     }
 }
