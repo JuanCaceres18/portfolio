@@ -947,11 +947,83 @@ input[type="search"]::-webkit-search-cancel-button {
         padding: 20px;
     }
     /* Section Skills */
+    .skills{
+        height: 120vh;
+    }
     .design-skills{
         display: none;
     }
     .container-cards{
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card{
+        width: 150px;
+        height: 150px;
+    }
+    .card h4{
+        color: white;
+    }
+    .icon-card{
+        width:60px;
+        height: 60px;
+    }
+    /* Section Work */
+    .project{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .text-container-project{
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+    }
+    .title-project{
+        color: #F4CD6C;
+        font-size: 50px;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+    }
+    .text-project{
+        width: 90%;
+        text-align: center;
+    }
+    .img-container{
+        width: 450px;
+        height: 200px;
+        order: -1;
+        margin-bottom: 30px;
+    }
+    .img-container img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        order: -1;
+        margin-bottom: 30px;
+    }
+    /* Section Contact */
+    .arrow-contact{
+        width: 80px;
+        height: 60px;
+    }
+    .global-container-contact{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;   
+    }
+    .text-contact{
+        width: 100%;
+        text-align: center;
+    }
+    /* Footer */
+    footer{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 5px solid #F2C94C;
+        margin: 20px 130px 0px 130px;
     }
 }
