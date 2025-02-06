@@ -1301,16 +1301,15 @@ input[type="search"]::-webkit-search-cancel-button {
         height: 850px;
     }
     .diseño-circulos{
-        width: 950px;
+        width: 750px;
         height: 690px;
         position: absolute;
         top: 160px;
+        right: -250px;
         z-index: -1;
     }
     .icons{
-        width: 200px;
-        margin-top: 20px;
-        margin-bottom: 0px;
+        display: none;
     }
     /* Section About */
     .about-me{
@@ -1329,9 +1328,12 @@ input[type="search"]::-webkit-search-cancel-button {
         width: 350px;
     }
     /* Section Skills */
+    .skills{
+        height: 55vh;
+    }
     .card{
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
         background-color: #3D3E42;
         display: flex;
         flex-direction: column;
@@ -1341,15 +1343,15 @@ input[type="search"]::-webkit-search-cancel-button {
         border-radius: 15px;
     }
     .card .icon-card{
-        width: 70px;
-        height: 70px;
+        width: 40px;
+        height: 40px;
     }
     .card h4{
         font-size: 25px;
     }
     /* Section Work */
     .work{
-        height: 170vh;
+        height: 200vh;
     }
     .projects{
         padding-top: 30px;
@@ -1387,7 +1389,7 @@ input[type="search"]::-webkit-search-cancel-button {
     }
     .text-project h3{
         width: 450px;
-        font-size: 30px;
+        font-size: 40px;
         letter-spacing: 10px;
     }
     .text-project p{
@@ -1465,7 +1467,7 @@ input[type="search"]::-webkit-search-cancel-button {
     
     /* Section Contact */
     .contact{
-        height: 55vh;
+        height: 50vh;
     }
     .text-container-contact .text-contact{
         width: 90%;
